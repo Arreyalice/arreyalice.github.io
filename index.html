@@ -1,0 +1,813 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alice Ebai — Cybersecurity Portfolio</title>
+
+    <!-- Font Awesome (optional). If you don't want external scripts, remove this and the <i> icons. -->
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+<!-- ========= HEADER / HERO ========= -->
+<div id="header">
+    <div class="container">
+        <nav aria-label="Primary">
+            <a class="brand" href="#header">
+                <div class="brand-badge" aria-hidden="true">AE</div>
+                <div>
+                    <span>Alice Ebai</span>
+                    <small>Cybersecurity Student • Internship</small>
+                </div>
+            </a>
+
+            <ul id="sidemenu" role="list">
+                <li><a href="#header" data-close>Home</a></li>
+                <li><a href="#about" data-close>About</a></li>
+                <li><a href="#services" data-close>Focus</a></li>
+                <li><a href="#portfolio" data-close>Portfolio</a></li>
+                <li><a href="#posts" data-close>Posts</a></li>
+                <li><a href="#build" data-close>How it was built</a></li>
+                <li><a href="#contact" data-close>Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()" aria-label="Close menu"></i>
+            </ul>
+
+            <div class="nav-actions">
+                <a class="btn secondary" href="#contact"><i class="fas fa-paper-plane"></i>Contact</a>
+                <!-- Replace later if you want a PDF CV file -->
+                <a class="btn" href="#cv"><i class="fas fa-file-alt"></i>View CV</a>
+            </div>
+
+            <i class="fas fa-bars" onclick="openmenu()" aria-label="Open menu"></i>
+        </nav>
+
+        <div class="hero" role="region" aria-label="Introduction">
+            <div>
+                <p class="kicker">Cybersecurity • Vulnerability Management • SBOM & Supply Chain Security</p>
+                <h1>Hi, I’m <span>Alice</span><br/>Ebai</h1>
+
+                <p class="lead" style="margin-top:14px;">
+                    This website documents my academic work, internship, events, hackathons, and projects related to cybersecurity and IT.
+                    It provides an overview of my interests, technical skills, and professional development throughout my studies
+                    at Howest University of Applied Sciences. The portfolio is continuously updated during the academic year.
+                </p>
+
+                <div class="pill-row" aria-label="Highlights">
+                    <div class="pill"><i class="fas fa-shield-alt"></i>Penetration testing (academic projects)</div>
+                    <div class="pill"><i class="fas fa-sitemap"></i>Networking & segmentation</div>
+                    <div class="pill"><i class="fas fa-box"></i>SBOM / supply chain security</div>
+                    <div class="pill"><i class="fas fa-terminal"></i>Automation (Docker / Ansible)</div>
+                </div>
+
+                <div class="hero-cta">
+                    <a class="btn" href="#portfolio"><i class="fas fa-folder-open"></i>Explore work</a>
+                    <a class="btn secondary" href="#posts"><i class="fas fa-pen-nib"></i>Read posts</a>
+                    <a class="btn secondary" href="#contact"><i class="fas fa-handshake"></i>Internship contact</a>
+                </div>
+            </div>
+            <div class="hero-photo" aria-label="Profile photo">
+                <img src="images/img_4.png" height="1289" width="1044"/>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ========= ABOUT ========= -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <!-- No photo was provided. This is an explicit placeholder, not an assumption. -->
+                <div class="about-col-1">
+                    <div class="about-photo">
+                        <img src="images/img_5.png" alt="Alice Ebai profile photo">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p class="lead">
+                    Alice Ebai is a final-year Applied Computer Science student specializing in Cybersecurity at Howest University
+                    of Applied Sciences. The academic focus lies on securing networks, systems, and software, with a strong interest
+                    in vulnerability management, penetration testing, and software supply chain security.
+                </p>
+
+                <div class="tab-titles" role="tablist" aria-label="About tabs">
+                    <p class="tab-links active-link" role="tab" aria-selected="true" tabindex="0"
+                       onclick="opentab(event,'skills')" onkeydown="tabKey(event,'skills')">Skills</p>
+                    <p class="tab-links" role="tab" aria-selected="false" tabindex="0"
+                       onclick="opentab(event,'experience')" onkeydown="tabKey(event,'experience')">Experience</p>
+                    <p class="tab-links" role="tab" aria-selected="false" tabindex="0"
+                       onclick="opentab(event,'education')" onkeydown="tabKey(event,'education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills" role="tabpanel">
+                    <ul>
+                        <li><span>Networking</span><br/>Subnetting, VLANs, routing & switching (Cisco), DHCP/DNS, VPNs, OPNsense firewalls, segmentation, Wireshark</li>
+                        <li><span>Cybersecurity</span><br/>Penetration testing, vulnerability scanning, SOC monitoring, SIEM & EDR tooling, honeypot management, Windows + Linux</li>
+                        <li><span>Programming</span><br/>SQL, Java, JavaScript</li>
+                        <li><span>Automation & Tooling</span><br/>Docker, Docker Compose, Ansible, Trivy, Git & GitHub (as provided)</li>
+                        <li><span>Soft Skills</span><br/>Analytical thinking, problem-solving, leadership, public speaking</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience" role="tabpanel">
+                    <ul>
+                        <li>
+                            <span>Internship & bachelor thesis (Televic Rail) — 29 Sep 2025 to 12 Dec 2025</span><br/>
+                            Cybersecurity analysis of passenger information systems: vulnerability detection and SBOM evaluation. Tooling included OpenVAS (Greenbone), Tenable Nessus,
+                            Dependency-Track, GUAC, DefectDojo; automation using Docker and Ansible; alignment with IEC 62443 and EU Cyber Resilience Act requirements.
+                        </li>
+                        <li>
+                            <span>Penetration testing (Academic projects) — Apotheek Therssen & Seniorencentrum OLV</span><br/>
+                            Internal and external black-box testing from OSINT to reporting; documented vulnerabilities (SMB/AD weaknesses, outdated software);
+                            performed controlled phishing simulations and wrote remediation recommendations.
+                        </li>
+                        <li>
+                            <span>Live SOC monitoring (Ongoing) — LetsDefend</span><br/>
+                            Alert triage and investigation of potential incidents using SIEM/EDR logs; escalation based on criticality.
+                        </li>
+                        <li>
+                            <span>SOC analyst simulations (Ongoing) — TryHackMe</span><br/>
+                            Log analysis for phishing, malware detection, and network intrusion investigations in simulated enterprise scenarios.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education" role="tabpanel">
+                    <ul>
+                        <li><span>Howest University of Applied Sciences</span><br/>Applied Computer Science — Cybersecurity (academic years: 2022–2026 as provided)</li>
+                        <li><span>Coursework (selection)</span><br/>Web pentesting, reverse engineering & malware analysis, secure development, advanced mobile security, computer networks, server system management</li>
+                        <li><span>Certifications</span><br/>Certified Ethical Hacker (CEH) • EIT HEI Initiative Certificate of Achievement — REGINNA 4.0 Summer School</li>
+                        <li><span>Languages</span><br/>English (native/mother tongue) • French (intermediate)</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========= FOCUS / SERVICES ========= -->
+<section id="services" class="section compact">
+    <div class="container">
+        <h2 class="sub-title">Focus Areas</h2>
+        <p class="lead">
+            The work in this portfolio is centered around practical security: identifying risks, validating exposure,
+            documenting evidence, and communicating actionable recommendations.
+        </p>
+
+        <div class="services-list" style="margin-top:22px;">
+            <div class="service">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                <h2>Vulnerability & Exposure Analysis</h2>
+                <p>
+                    Vulnerability scanning, validation, and prioritization using structured workflows.
+                    Strong interest in vulnerability management and responsible reporting.
+                </p>
+            </div>
+
+            <div class="service">
+                <i class="fas fa-box" aria-hidden="true"></i>
+                <h2>SBOM & Supply Chain Security</h2>
+                <p>
+                    SBOM generation/validation and vulnerability correlation using platforms such as Dependency-Track, GUAC,
+                    and DefectDojo (as used in the internship context you provided).
+                </p>
+            </div>
+
+            <div class="service">
+                <i class="fas fa-network-wired" aria-hidden="true"></i>
+                <h2>Network & System Security</h2>
+                <p>
+                    Networking fundamentals (VLANs, segmentation, routing, DNS/DHCP), firewall management (OPNsense),
+                    and secure Windows/Linux administration from academic projects.
+                </p>
+            </div>
+
+            <div class="service">
+                <i class="fas fa-robot" aria-hidden="true"></i>
+                <h2>Automation & Reproducible Tooling</h2>
+                <p>
+                    Automation with Docker and Ansible to deploy security tooling reliably, supporting repeatability and
+                    scalable security workflows.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========= CV (Single-page section, "multi-page feel") ========= -->
+<section id="cv" class="section">
+    <div class="container">
+        <h2 class="sub-title">Curriculum Vitae</h2>
+
+        <div class="card">
+            <p class="lead">
+                <strong>Alice Ebai</strong><br/>
+                Cybersecurity Student — Applied Computer Science<br/>
+                Seeking internship (as provided)
+            </p>
+
+            <hr style="border:0; border-top:1px solid rgba(255,255,255,.08); margin: 16px 0;" />
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Professional Summary</h3>
+                    <p class="lead" style="font-size:14px;">
+                        A dedicated and motivated student pursuing a degree in Cybersecurity. Hands-on experience in penetration testing,
+                        live SOC monitoring, and secure system administration through academic and practical projects. Seeking an internship
+                        to apply skills in vulnerability analysis and threat detection to protect organizational assets and contribute to a robust security posture.
+                    </p>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Contact</h3>
+                    <p style="color:#e6e6e6; line-height:1.9;">
+                        <i class="fas fa-envelope" style="color:var(--accent); width:22px;"></i>
+                        <a href="mailto:arreyalice29@gmail.com">arreyalice29@gmail.com</a><br/>
+                        <i class="fas fa-phone" style="color:var(--accent); width:22px;"></i>
+                        <a href="tel:+32465155547">+32 465 155 547</a><br/>
+                        <i class="fab fa-linkedin" style="color:var(--accent); width:22px;"></i>
+                        <a href="https://www.linkedin.com/in/alice-ebai-476b53222/" target="_blank" rel="noopener">
+                            linkedin.com/in/alice-ebai-476b53222
+                        </a>
+                    </p>
+                    <p style="color: var(--muted2); font-size: 13px; margin-top: 10px;">
+                        (You asked to show email + phone, so the address is intentionally not displayed.)
+                    </p>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Education</h3>
+                    <p style="color:#e6e6e6; line-height:1.9;">
+                        <strong>Howest University of Applied Sciences</strong><br/>
+                        Applied Computer Science — Cybersecurity<br/>
+                        Academic Year: 2022–2026 (as provided)
+                    </p>
+                    <p style="color: var(--muted); margin-top:10px; line-height:1.7; font-size: 14px;">
+                        Relevant coursework: Web pentesting, reverse engineering & malware analysis, secure development,
+                        advanced mobile security, computer networks, server system management.
+                    </p>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Certifications & Achievements</h3>
+                    <ul style="margin-left:18px; color:#e6e6e6; line-height:1.9;">
+                        <li>Certified Ethical Hacker (CEH)</li>
+                        <li>EIT HEI Initiative Certificate of Achievement — REGINNA 4.0 Summer School</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Professional Experience</h3>
+                    <p style="color:#e6e6e6; line-height:1.9;">
+                        <strong>Cashier — Burger King, Belgium</strong><br/>
+                        March 2023 – Present
+                    </p>
+                    <ul style="margin-left:18px; color:#e6e6e6; line-height:1.9;">
+                        <li>Operated POS systems and supported customer service in a fast-paced environment.</li>
+                        <li>Worked consistently in a team to meet operational goals and support a positive customer experience.</li>
+                        <li>Strengthened communication and problem-solving skills.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Technical Skills (condensed)</h3>
+                    <ul style="margin-left:18px; color:#e6e6e6; line-height:1.9;">
+                        <li><strong>Security:</strong> pentesting, vulnerability scanning, SOC monitoring, SIEM & EDR</li>
+                        <li><strong>Networking:</strong> VLANs, routing/switching, DNS/DHCP, VPNs, OPNsense, Wireshark</li>
+                        <li><strong>Tools:</strong> OpenVAS, Nessus, Dependency-Track, GUAC, DefectDojo, Trivy, Git</li>
+                        <li><strong>Automation:</strong> Docker, Docker Compose, Ansible</li>
+                        <li><strong>Programming:</strong> SQL, Java, JavaScript</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="btn secondary" href="#contact"><i class="fas fa-paper-plane"></i>Contact for internship</a>
+                <a class="btn" href="#portfolio"><i class="fas fa-folder-open"></i>See projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========= PORTFOLIO (Cards + reader = “mix of single + multipage”) ========= -->
+<section id="portfolio" class="section">
+    <div class="container">
+        <h2 class="sub-title">Portfolio</h2>
+        <p class="lead">
+            Selected work, activities, and projects. Click <strong>Read</strong> to open a detailed “post view” (multi-page feel),
+            while staying inside one HTML file (single-page deployment).
+        </p>
+
+        <div class="work-toolbar">
+            <div class="search" aria-label="Search portfolio">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input id="searchInput" type="text" placeholder="Search by title, tag, or keyword…" />
+            </div>
+
+            <div class="filters" aria-label="Filters">
+                <button class="chip active" data-filter="all" type="button">All</button>
+                <button class="chip" data-filter="internship" type="button">Internship</button>
+                <button class="chip" data-filter="pentest" type="button">PenTesting</button>
+                <button class="chip" data-filter="soc" type="button">SOC</button>
+                <button class="chip" data-filter="events" type="button">Events</button>
+                <button class="chip" data-filter="podcast" type="button">Podcast</button>
+                <button class="chip" data-filter="build" type="button">Website</button>
+            </div>
+        </div>
+
+        <div id="workGrid" class="work-list" aria-label="Portfolio cards">
+
+            <!-- Internship / Thesis -->
+            <article class="work" data-tags="internship sbom supply-chain vulnerability scanning automation standards" data-filter="internship">
+                <div class="thumb">
+                    <div class="badge"><i class="fas fa-train" aria-hidden="true"></i> Internship & Thesis</div>
+                </div>
+                <div class="content">
+                    <h3>Televic Rail — Cybersecurity Analysis of Passenger Information Systems</h3>
+                    <p>
+                        Vulnerability scanning + SBOM evaluation and platform integration (Dependency-Track, GUAC, DefectDojo), automated with Docker/Ansible.
+                    </p>
+                    <div class="meta">
+                        <span class="mini">29 Sep 2025 → 12 Dec 2025</span>
+                        <span class="mini">IEC 62443</span>
+                        <span class="mini">EU CRA</span>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/internship"><i class="fas fa-book-open"></i>Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pentest projects -->
+            <article class="work" data-tags="pentest osint phishing smb active-directory reporting" data-filter="pentest">
+                <div class="thumb">
+                    <div class="badge"><i class="fas fa-bug" aria-hidden="true"></i> Academic project</div>
+                </div>
+                <div class="content">
+                    <h3>Penetration Testing — Apotheek Therssen & Seniorencentrum OLV</h3>
+                    <p>
+                        Internal & external black-box testing from OSINT to reporting; documented SMB/AD weaknesses and outdated software; phishing simulation reflection.
+                    </p>
+                    <div class="meta">
+                        <span class="mini">Black-box methodology</span>
+                        <span class="mini">Risk reporting</span>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/pentest"><i class="fas fa-book-open"></i>Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SOC monitoring -->
+            <article class="work" data-tags="soc monitoring siem edr triage letsdefend" data-filter="soc">
+                <div class="thumb">
+                    <div class="badge"><i class="fas fa-radar" aria-hidden="true"></i> Ongoing</div>
+                </div>
+                <div class="content">
+                    <h3>Live SOC Monitoring — LetsDefend</h3>
+                    <p>
+                        Alert triage, investigation, and escalation based on SIEM/EDR evidence in a simulated SOC environment.
+                    </p>
+                    <div class="meta">
+                        <span class="mini">Alert triage</span>
+                        <span class="mini">Investigation workflows</span>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/letsdefend"><i class="fas fa-book-open"></i>Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- TryHackMe -->
+            <article class="work" data-tags="soc tryhackme incidents phishing malware intrusion logs" data-filter="soc">
+                <div class="thumb">
+                    <div class="badge"><i class="fas fa-user-shield" aria-hidden="true"></i> Ongoing</div>
+                </div>
+                <div class="content">
+                    <h3>SOC Analyst Simulations — TryHackMe</h3>
+                    <p>
+                        Realistic incident investigations: phishing log analysis, malware detection, and network intrusion scenarios.
+                    </p>
+                    <div class="meta">
+                        <span class="mini">Log analysis</span>
+                        <span class="mini">Threat detection</span>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/tryhackme"><i class="fas fa-book-open"></i>Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tech&Meet — Transitioning to IPv6 -->
+            <article class="work" data-tags="events techmeet ipv6 networking transition" data-filter="events">
+                <div class="thumb">
+                    <!-- Event image -->
+                    <img src="images/img_6.png" alt="Tech&Meet Transitioning to IPv6 event">
+
+                    <div class="badge">
+                        <i class="fas fa-globe-europe" aria-hidden="true"></i> Tech&Meet
+                    </div>
+                </div>
+
+                <div class="content">
+                    <h3>Tech&Meet — Transitioning to IPv6</h3>
+
+                    <p>
+                        Tech&Meet session focused on the inevitable transition from IPv4 to IPv6,
+                        covering dual-stack strategies, IPv6-only scenarios, routing, firewalling,
+                        and security-by-design considerations.
+                    </p>
+
+                    <div class="meta">
+                        <span class="mini">25 November 2025 · 19:00–20:30</span>
+                        <span class="mini">Networking · IPv6</span>
+                    </div>
+
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/ipv6">
+                            <i class="fas fa-book-open"></i> Read
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- Tech&Meet — Cross-Platform App Development with Flutter -->
+            <article class="work" data-tags="events techmeet flutter development cross-platform" data-filter="events">
+                <div class="thumb">
+                    <!-- Event image -->
+                    <img src="images/img_8.png" alt="Tech&Meet Cross-Platform App Development with Flutter">
+
+                    <div class="badge">
+                        <i class="fas fa-code" aria-hidden="true"></i> Tech&Meet
+                    </div>
+                </div>
+
+                <div class="content">
+                    <h3>Tech&Meet — Cross-Platform App Development with Flutter</h3>
+
+                    <p>
+                        Hands-on Tech&Meet exploring Flutter as a cross-platform framework,
+                        covering UI composition, performance, hot reload, native integration,
+                        and real-world application use cases.
+                    </p>
+
+                    <div class="meta">
+                        <span class="mini">05 November 2025 · 19:00–20:30</span>
+                        <span class="mini">Development · Flutter</span>
+                    </div>
+
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/flutter">
+                            <i class="fas fa-book-open"></i> Read
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tech&Meet — Open Minds, Open Models: Exploring the Open-Source AI Ecosystem -->
+            <article class="work" data-tags="events techmeet ai open-source machine-learning" data-filter="events">
+                <div class="thumb">
+                    <!-- Event image -->
+                    <img src="images/img_7.png" alt="Tech&Meet Open Minds Open Models Open-Source AI">
+
+                    <div class="badge">
+                        <i class="fas fa-brain" aria-hidden="true"></i> Tech&Meet
+                    </div>
+                </div>
+
+                <div class="content">
+                    <h3>Tech&Meet — Open Minds, Open Models: Exploring the Open-Source AI Ecosystem</h3>
+
+                    <p>
+                        Tech&Meet session exploring the differences between open-source and closed-source AI,
+                        with a focus on the Hugging Face ecosystem and practical experimentation with models,
+                        tools, and datasets.
+                    </p>
+
+                    <div class="meta">
+                        <span class="mini">28 October 2025 · 19:00–21:00</span>
+                        <span class="mini">AI · Open source</span>
+                    </div>
+
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/openai">
+                            <i class="fas fa-book-open"></i> Read
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+
+
+            <!-- Tech&Meet OT/IT -->
+            <article class="work" data-tags="events techmeet ot it nis2 iec62443 architecture" data-filter="events">
+                <div class="thumb">
+                    <div class="badge"><i class="fas fa-industry" aria-hidden="true"></i> Tech&Meet</div>
+                </div>
+                <div class="content">
+                    <h3>Tech&Meet — Bridging OT & IT using NIS2 and IEC 62443</h3>
+                    <p>
+                        Reflection on defensible architecture, OT vs IT constraints, and how standards and regulation shape security design.
+                    </p>
+                    <div class="meta">
+                        <span class="mini">Date: 2025-11 (day not specified)</span>
+                        <span class="mini">OT security</span>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/otit"><i class="fas fa-book-open"></i>Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Hack The Future – Hackathon -->
+            <article class="work" data-tags="hackathon ai data analytics events" data-filter="events">
+                <div class="thumb">
+                    <img src="images/img_9.png" alt="Hack The Future hackathon event">
+                    <div class="badge">Hackathon</div>
+                </div>
+
+                <div class="content">
+                    <h3>Hack The Future — Abyssal Insights Challenge</h3>
+
+                    <p>
+                        Physical hackathon focused on collaborative problem-solving under time pressure.
+                        Participated in the <strong>Abyssal Insights</strong> challenge, analysing complex
+                        deep-sea datasets using data analysis and AI-driven approaches.
+                    </p>
+
+                    <div class="meta">
+                        <span class="mini">12 October 2025</span>
+                        <span class="mini">AI & Data Analytics</span>
+                    </div>
+
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/hack-the-future">
+                            <i class="fas fa-book-open"></i> Read
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- Podcast -->
+            <article class="work" data-tags="podcast supply-chain dependencies sbom communication" data-filter="podcast">
+                <div class="thumb">
+                    <div class="badge"><i class="fas fa-microphone" aria-hidden="true"></i> Podcast</div>
+                </div>
+                <div class="content">
+                    <h3>Podcast — Supply Chain Security & Software Dependencies</h3>
+                    <p>
+                        Podcast assignment: dependency risks, incidents like Log4j, SBOM value, and integrating security into the development lifecycle.
+                    </p>
+                    <div class="meta">
+                        <span class="mini">15–50 minutes (assignment spec)</span>
+                        <span class="mini">External expert guest</span>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/podcast"><i class="fas fa-book-open"></i>Read</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Website build -->
+            <article class="work" data-tags="build website github-pages jekyll markdown" data-filter="build">
+                <div class="thumb">
+                    <div class="badge"><i class="fas fa-code" aria-hidden="true"></i> Website</div>
+                </div>
+                <div class="content">
+                    <h3>How the website was created</h3>
+                    <p>
+                        Overview of the technical choices behind this e-portfolio, including
+                        manual development using HTML, CSS, and JavaScript, and deployment via
+                        GitHub Pages.
+                    </p>
+                    <div class="meta">
+                        <span class="mini">HTML</span>
+                        <span class="mini">CSS</span>
+                        <span class="mini">JavaScript</span>
+                        <span class="mini">GitHub Pages</span>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- LinkedIn reflection -->
+            <article class="work" data-tags="events linkedin networking professional" data-filter="events">
+                <div class="thumb">
+                    <div class="badge"><i class="fab fa-linkedin" aria-hidden="true"></i> Professional networking</div>
+                </div>
+                <div class="content">
+                    <h3>LinkedIn & Professional Networking</h3>
+                    <p>
+                        Why LinkedIn matters in IT, how the profile was developed, and planned improvements (connections, updates, PDF export).
+                    </p>
+                    <div class="meta">
+                        <span class="mini">Profile + reflection</span>
+                        <span class="mini">Network growth</span>
+                    </div>
+                    <div style="margin-top:14px;">
+                        <a class="btn secondary" href="#read/linkedin"><i class="fas fa-book-open"></i>Read</a>
+                    </div>
+                </div>
+            </article>
+
+
+
+        </div>
+
+        <!-- Reader (multi-page feel) -->
+        <div id="reader" class="card" aria-live="polite">
+            <div class="reader-top">
+                <div>
+                    <div id="readerTitle" class="reader-title">Title</div>
+                    <div id="readerMeta" style="color: var(--muted2); font-size: 13px; margin-top: 6px;"></div>
+                </div>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <a class="btn secondary" href="#portfolio"><i class="fas fa-arrow-left"></i>Back to cards</a>
+                    <a class="btn" href="#contact"><i class="fas fa-paper-plane"></i>Contact</a>
+                </div>
+            </div>
+            <div id="readerBody" class="reader-body"></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========= POSTS (explicit module-friendly section) ========= -->
+<section id="posts" class="section compact">
+    <div class="container">
+        <h2 class="sub-title">Posts & Reflections</h2>
+
+        <p class="lead">
+            This section documents my learning journey throughout the
+            <em>Professional Networking</em> module. It combines structured
+            reflections, supporting evidence, and practical outcomes from
+            academic, extracurricular, and professional activities such as
+            Tech&Meet events, hackathons, podcasts, internship preparation,
+            and online professional presence.
+        </p>
+
+        <div class="card" style="margin-top:18px;">
+            <p style="color:#e6e6e6; line-height:1.9;">
+                The posts in this section cover a broad range of activities,
+                including the development of my curriculum vitae, preparation
+                for my internship and bachelor thesis, participation in
+                hackathons and Tech&Meet events, academic and self-directed
+                projects, and continuous reflection on learning and
+                professional growth.
+            </p>
+
+            <p style="margin-top:12px; color:#cfcfcf;">
+                Each post focuses not only on <strong>what</strong> was done,
+                but also on <strong>what was learned</strong>,
+                <strong>why it matters</strong>, and
+                <strong>how it contributes</strong> to my development as a
+                cybersecurity professional. Where relevant, reflections
+                reference real-world tools, industry practices, and
+                transferable professional skills.
+            </p>
+        </div>
+
+        <p style="margin-top:14px; font-size:14px; color:#b9b9b9;">
+            Together, these reflections demonstrate continuous learning,
+            professional awareness, and alignment with the expectations of
+            a junior cybersecurity professional.
+        </p>
+    </div>
+</section>
+
+
+<!-- ========= HOW IT WAS BUILT ========= -->
+<section id="build" class="section">
+    <div class="container">
+        <h2 class="sub-title">How this website was created</h2>
+
+        <div class="card">
+            <p class="lead">
+                This website was created as an e-portfolio for the course <em>Professional Networking</em> at Howest University of Applied Sciences.
+                The goal is to present academic work, professional activities, and extracurricular involvement in a structured and accessible way,
+                while also serving as a professional portfolio for job applications.
+            </p>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top:16px;">
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Platform & Hosting</h3>
+                    <p style="color:#e6e6e6; line-height:1.85;">
+                        Hosted using <strong>GitHub Pages</strong>. The website was built manually using
+                        <strong>HTML, CSS, and JavaScript</strong>, without frameworks or static site generators,
+                        allowing full control over structure, styling, and behavior. HTTPS is enforced by default.
+                    </p>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Content & Maintenance</h3>
+                    <p style="color:#e6e6e6; line-height:1.85;">
+                        All content and source code are maintained in a GitHub repository using
+                        <strong>Git</strong>. Changes are tracked through commits and deployed by updating
+                        the repository, supporting traceability and continuous improvement throughout the year.
+                    </p>
+                </div>
+
+                <div class="card" style="background: rgba(255,255,255,.03);">
+                    <h3 style="font-size:16px; margin-bottom:10px;">Why this file exists</h3>
+                    <p style="color:#e6e6e6; line-height:1.85;">
+                        This website follows a traditional multi-file structure using separate HTML,
+                        CSS, JavaScript, and image files. JavaScript is used to enhance navigation and
+                        content interaction, allowing sections such as detailed views to be displayed
+                        dynamically without requiring additional page reloads.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========= CONTACT ========= -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="row">
+
+            <div class="contact-left">
+                <h2 class="sub-title">Contact</h2>
+                <p class="lead">
+                    Interested in discussing junior cybersecurity opportunities, professional roles,
+                    or my portfolio projects? I’m open to connecting with professionals, recruiters,
+                    and teams looking for motivated early-career talent.
+                </p>
+
+
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:arreyalice29@gmail.com">arreyalice29@gmail.com</a></p>
+                <p><i class="fas fa-phone-square-alt" aria-hidden="true"></i> <a href="tel:+32465155547">+32 465 155 547</a></p>
+                <p><i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <a href="https://www.linkedin.com/in/alice-ebai-476b53222/" target="_blank" rel="noopener">
+                        linkedin.com/in/alice-ebai-476b53222
+                    </a>
+                </p>
+
+                <div class="social-icons" aria-label="Social links">
+                    <a href="https://www.linkedin.com/in/alice-ebai-476b53222/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- If you want GitHub later, add your link here (not provided, so placeholder only). -->
+                    <a href="#" aria-label="GitHub (add link)" title="Add your GitHub link (not provided)">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+                <div style="margin-top:14px;">
+                    <a class="btn secondary" href="mailto:arreyalice29@gmail.com?subject=Internship%20Opportunity%20-%20Alice%20Ebai">
+                        <i class="fas fa-paper-plane"></i>Email about internship
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <div class="card">
+                    <h3 style="font-size:18px; margin-bottom:8px;">Send a message</h3>
+                    <p style="color: var(--muted); line-height:1.7; font-size: 14px;">
+                        This form can work locally (shows a success message) or submit to Google Sheets if you add an Apps Script URL.
+                        (URL not provided, so it defaults to local success.)
+                    </p>
+
+                    <form name="submit-to-google-sheet" id="contactForm">
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn"><i class="fas fa-check"></i>Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>© <span id="year"></span> Alice Ebai. <i class="fas fa-heart"></i></p>
+    </div>
+</section>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
+```
+
