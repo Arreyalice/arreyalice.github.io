@@ -245,7 +245,7 @@ const POSTS = {
     },
     podcast: {
         title: "Podcast — Supply Chain Security & Software Dependencies",
-        meta: "Assignment: 15–50 minutes • External expert • Link placeholder",
+        meta: "Assignment: 25 minutes • External expert guest•",
         body: `
           <p>
             Podcast focusing on software supply chain security and dependency risks. Discussed why supply chain attacks are attractive,
